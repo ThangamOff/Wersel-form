@@ -70,6 +70,9 @@
     color: rgb(255, 255, 255);
     cursor: pointer;
 }
+.log_content button:hover{
+    background-color: rgb(59, 177, 100);
+}
 .log_content p[title]{
     text-align: start;
     color: red;
@@ -96,6 +99,20 @@
     border-radius: 4px;
     border: 2px solid rgb(168, 168, 168);
 }
+.ch1:hover{
+    border: 2px solid rgb(0, 0, 0);
+}
+.forgot-password{
+    cursor: pointer;
+}
+.forgot-password a{
+    color: rgb(101, 177, 127);
+    text-decoration: none;
+}
+.forgot-password:hover{
+    text-decoration: underline;   
+}
+
 
 
 @media only screen and (max-width: 768px) {
@@ -106,7 +123,7 @@
         width: 100%;
     }
     .header img{
-        width: 80%;
+        width: 50%;
         height: auto;
     }
     .log_content{

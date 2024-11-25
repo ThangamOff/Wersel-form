@@ -57,7 +57,7 @@ const Login = () => {
                   />
                 {error.password && <p title="">Please enter your Password</p>}
                 <button onClick={changedata1}>LOGIN</button>
-                <p>Forget Password ? Click here to change</p>
+                <p className="forgot-password">Forgot Password? <a href="#">Click here to change</a></p>
               </div>
             </div>
           </div>
