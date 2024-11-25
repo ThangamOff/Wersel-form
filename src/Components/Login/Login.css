@@ -11,7 +11,6 @@
 .login_left{
     width: 100%;
     height: 100%;
-    /* background-color: red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,7 +31,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: rgb(28, 75, 60) ; */
 }
 .form{
     width: 80%;
@@ -41,7 +39,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* background-color: aqua; */
     gap: 20px;
 }
 .header{
@@ -98,4 +95,29 @@
     padding: 13px 12px;
     border-radius: 4px;
     border: 2px solid rgb(168, 168, 168);
+}
+
+
+@media only screen and (max-width: 768px) {
+    .login_left{
+        display: none;
+    }
+    .login_right{
+        background-color: aquamarine;
+    }
+    .header{
+        width: 100%;
+    }
+    .header img{
+        width: 80%;
+        height: auto;
+    }
+    .log_content{
+        width: 100%;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import "./Login.css";
 import logo from '../../Assets/Images/logo.svg'
-import data from '../../Assets/Images/data.jpg'
 import data1 from '../../Assets/Images/data1.avif'
 import { useState } from "react";
 
