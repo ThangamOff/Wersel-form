@@ -40,21 +40,25 @@ const Login = () => {
                 <img src={logo} alt="" />
               </div>
               <div className="log_content">
-                  <input
+                <div className="check">
+                <input
                       type="text"
                       name="email"
-                      placeholder="Email Address"
                       onChange={changedata}
                       className={error.email ? "ch" : "ch1"}
                   />
+                   <label for="name" className="labels1">Enter your name</label>
+                </div>
                   {error.email && <p title="">Please enter your Email address</p>}{" "}
-                  <input
+                 <div className="check">
+                 <input
                       type="password"
                       name="password"
-                      placeholder="Password"
                       onChange={changedata}
                       className={error.password ? "ch" : "ch1"}
                   />
+                  <label for="name" className="labels1">Enter your name</label>
+                 </div>
                 {error.password && <p title="">Please enter your Password</p>}
                 <button onClick={changedata1}>LOGIN</button>
                 <p className="forgot-password">Forgot Password? <a href="#">Click here to change</a></p>
