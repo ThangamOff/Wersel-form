@@ -179,5 +179,13 @@
         flex-direction: column;
         gap: 20px;
     }
-    
+    .labels1{
+        top: 20%;
+    }
+    .log_content button{
+        width: 100%;
+    }
+    .check input{
+        width: 75%;
+    }
 }
