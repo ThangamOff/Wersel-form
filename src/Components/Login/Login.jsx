@@ -47,7 +47,7 @@ const Login = () => {
                       onChange={changedata}
                       className={error.email ? "ch" : "ch1"}
                   />
-                   <label for="name" className="labels1">Enter your name</label>
+                   <label for="name" className="labels1">Email Address</label>
                 </div>
                   {error.email && <p title="">Please enter your Email address</p>}{" "}
                  <div className="check">
@@ -57,7 +57,7 @@ const Login = () => {
                       onChange={changedata}
                       className={error.password ? "ch" : "ch1"}
                   />
-                  <label for="name" className="labels1">Enter your name</label>
+                  <label for="name" className="labels1">Password</label>
                  </div>
                 {error.password && <p title="">Please enter your Password</p>}
                 <button onClick={changedata1}>LOGIN</button>
