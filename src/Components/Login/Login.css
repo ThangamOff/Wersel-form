@@ -42,7 +42,7 @@
     gap: 20px;
 }
 .header{
-    width: 70%;
+    width: 60%;
     height: 60px;
     display: flex;
     justify-content: center;
@@ -54,13 +54,7 @@
     height: 80px;
     align-items: center;
 }
-.log_content{
-    width: 60%;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
+
 .log_content button{
     padding: 8px 14px;
     border-radius: 4px;
@@ -85,24 +79,6 @@
     text-align: center;
     color: rgb(101, 177, 127);
 }
-.ch{
-    display: flex;
-    flex-direction: column-reverse;
-    padding: 13px 12px;
-    border-radius: 4px;
-    border: 2px solid rgb(194, 193, 193);
-    border: 1px solid red;
-}
-.ch1{
-    display: flex;
-    flex-direction: column-reverse;
-    padding: 13px 12px;
-    border-radius: 4px;
-    border: 2px solid rgb(168, 168, 168);
-}
-.ch1:hover{
-    border: 2px solid rgb(0, 0, 0);
-}
 .forgot-password{
     cursor: pointer;
 }
@@ -113,52 +89,66 @@
 .forgot-password:hover{
     text-decoration: underline;   
 }
+.log_content{
+    width: 60%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
 .check {
     position: relative;
-    width: 300px;
+    width: 100%;
+    height: auto;
     margin: 20px auto;
-    height: 100px;
   }
-  
-  .check input {
-    position: absolute;
-    width: 90%;
-    padding: 10px;
-    background: transparent;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    transition: 0.3s ease;
-    outline: none;
-    z-index: 1;
 
-  }
-  
-  .check input:focus,
-  .check input:valid {
-    border-color: rgb(168, 168, 168);
-  }
-  
-  .labels1{
+.labels{
     position: absolute;
-    top: 50%;
-    left: 10px;
-    color: rgb(168, 168, 168);
-    padding: 0 10px;
-    font-size: 16px;
-    transition: 0.3s ease;
-    transform: translateY(45%);
-    z-index: 999;
-  }
-  
-  .check input:focus + .labels1{
-    top: -10px;
-    font-size: 12px;
+    top: 25%;
+    left: 18px;
+    color: rgb(199, 197, 197);
+    padding: 0 5px;
+    transform: translate(-10px);
+    pointer-events: none;
+    transition: .5s;
+    font-size: 17px;
+}
+.ch1{
+    left: 20%;
+    font-size: 20px;
+    color: #000000;
+    padding: 8px 20px;
+    background-color: transparent;
+    border: 2px solid gray;
+    outline: none;
+    border-radius: 4px;
+}
+.ch{
+    left: 20%;
+    font-size: 20px;
+    color: #000000;
+    padding: 8px 20px;
+    background-color: transparent;
+    border: 2px solid gray;
+    outline: none;
+    border-radius: 4px;
+}
+.check .ch:focus ~ .labels,
+.check .ch:valid ~ .labels {
+    top: -17%;
+    left: 8%;
+    font-size: 14px;
     color: red;
-    transform: translateY(3px) scale(0.9);
-    margin: 0 10px;
-    z-index: 9999;
-    background-color: white;
-  }
+    background-color: #ffffff;
+}
+.check .ch1:focus ~ .labels,
+.check .ch1:valid ~ .labels {
+    top: -17%;
+    left: 8%;
+    font-size: 14px;
+    color: red;
+    background-color: #ffffff;
+}
   
 
 @media only screen and (max-width: 768px) {
@@ -179,13 +169,14 @@
         flex-direction: column;
         gap: 20px;
     }
-    .labels1{
+    .labels{
         top: 20%;
     }
     .log_content button{
-        width: 100%;
+        width: 95%;
     }
-    .check input{
-        width: 75%;
+    .ch1{
+        padding: 8px 0;
     }
+    
 }

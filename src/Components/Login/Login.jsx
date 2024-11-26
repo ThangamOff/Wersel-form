@@ -1,29 +1,42 @@
 import React from "react";
 import "./Login.css";
-import logo from '../../Assets/Images/logo.svg'
-import data1 from '../../Assets/Images/data1.avif'
+import logo from "../../Assets/Images/logo.svg";
+import data1 from "../../Assets/Images/data1.avif";
 import { useState } from "react";
 
 const Login = () => {
   const [inputs, setinputs] = useState({ email: "", password: "" });
   const [error, seterror] = useState({ email: false, password: false });
+  const [op, setop] = useState(false);
   function changedata(e) {
     console.log("gjdfkjb");
-    
+
     let names = e.target.name;
     console.log(names);
     let values = e.target.value;
     console.log(values);
     setinputs({ ...inputs, [names]: values });
-    seterror({...error,[names]:false})
+    seterror({ ...error, [names]: false });
+    if (values == "") {
+      setop(true);
+    } else {
+      setop(false);
+    }
   }
   console.log(inputs);
   function changedata1(params) {
-    if (inputs.email == "" || inputs.password == "") {
+    if (inputs.email == "" && inputs.password == "") {
       seterror({ ...error, email: true, password: true });
+    } else if (inputs.email != "" && inputs.password == "") {
+      seterror({ ...error, email: false, password: true });
+    } else if (inputs.email == "" && inputs.password != "") {
+      seterror({ ...error, email: true, password: false });
+    } else if (inputs.email !== "" && inputs.password !== "") {
+      seterror({ ...error, email: false, password: false });
     }
   }
   console.log(error.email, error.password);
+  console.log(op);
 
   return (
     <>
@@ -41,27 +54,36 @@ const Login = () => {
               </div>
               <div className="log_content">
                 <div className="check">
-                <input
-                      type="text"
-                      name="email"
-                      onChange={changedata}
-                      className={error.email ? "ch" : "ch1"}
+                  <input
+                    type="text"
+                    name="email"
+                    onChange={changedata}
+                    className={error.email ? "ch" : "ch1"}
+                    required
                   />
-                   <label for="name" className="labels1">Email Address</label>
+                  <label for="" className="labels">
+                    Email Address
+                  </label>
                 </div>
-                  {error.email && <p title="">Please enter your Email address</p>}{" "}
-                 <div className="check">
-                 <input
-                      type="password"
-                      name="password"
-                      onChange={changedata}
-                      className={error.password ? "ch" : "ch1"}
+                {error.email && <p title="">Please enter your Email address</p>}{" "}
+                <div className="check">
+                  <input
+                    type="password"
+                    name="password"
+                    onChange={changedata}
+                    className={error.password ? "ch" : "ch1"}
+                    required
                   />
-                  <label for="name" className="labels1">Password</label>
-                 </div>
+
+                  <label for="" className="labels">
+                    Password
+                  </label>
+                </div>
                 {error.password && <p title="">Please enter your Password</p>}
                 <button onClick={changedata1}>LOGIN</button>
-                <p className="forgot-password">Forgot Password? <a href="#">Click here to change</a></p>
+                <p className="forgot-password">
+                  Forgot Password? <a href="#">Click here to change</a>
+                </p>
               </div>
             </div>
           </div>
