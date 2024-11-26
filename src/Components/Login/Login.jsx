@@ -17,10 +17,8 @@ const Login = () => {
     console.log(values);
     setinputs({ ...inputs, [names]: values });
     seterror({ ...error, [names]: false });
-    if (values == "") {
-      setop(true);
-    } else {
-      setop(false);
+    if (inputs.email=="" && inputs.password !="") {
+      seterror({...error,email:true})
     }
   }
   console.log(inputs);
