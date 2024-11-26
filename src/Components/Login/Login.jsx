@@ -61,7 +61,7 @@ const Login = () => {
                     className={error.email ? "ch" : "ch1"}
                     required
                   />
-                  <label for="" className="labels">
+                  <label for="" className={error.email?"label123":"labels"}>
                     Email Address
                   </label>
                 </div>
@@ -75,7 +75,7 @@ const Login = () => {
                     required
                   />
 
-                  <label for="" className="labels">
+                  <label for="" className={error.email?"label123":"labels"}>
                     Password
                   </label>
                 </div>
