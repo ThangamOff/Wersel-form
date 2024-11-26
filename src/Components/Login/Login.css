@@ -155,7 +155,7 @@
 }
 .check .ch:focus ~ .labels,
 .check .ch:valid ~ .labels {
-    top: -17%;
+    top: -18%;
     left: 8%;
     font-size: 14px;
     color: green;
@@ -212,8 +212,8 @@
     }
     .ch1{
         width: 100%;
-        font-size: 15px;
-        padding: 8px 10px;
+        font-size: 14px;
+        padding: 14px;
     }  
     .ch{
         font-size: 15px;
